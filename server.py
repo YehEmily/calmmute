@@ -15,7 +15,7 @@ def health():
 def home_page():
     return render_template('index.html')
 
-@app.route('/about.html')
+@app.route('/about.html', methods=['GET','POST'])
 def about_page():
 	return render_template('about.html')
 
