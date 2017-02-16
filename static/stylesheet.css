@@ -25,6 +25,18 @@ input[type=range] {
 	width: 50%;
 }
 
+table {
+	width: 95%;
+	padding: 2%;
+	border-radius: 20px;
+	border: 1px solid black;
+}
+
+td {
+	font-family: "Arapey", serif;
+	font-size: 2em;
+}
+
 button {
 	-webkit-transition-duration: 0.4s; /*For Safari users*/
   	transition-duration: 0.4s;
