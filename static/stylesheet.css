@@ -1,0 +1,17 @@
+body {
+  line-height: 1;
+  margin: 2%;
+}
+
+h1 {
+	font-family: "Amatic SC", cursive;
+	font-size: 6em;
+}
+
+p {
+	font-family: "Arapey", serif;
+	font-size: 2em;
+}
+
+/*font-family: 'Amatic SC', cursive;
+font-family: 'Arapey', serif;*/
