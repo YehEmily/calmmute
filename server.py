@@ -3,7 +3,9 @@ import random
 import urllib.request
 
 import pandas as pd
+
 from flask import Flask, redirect, render_template, request, url_for
+
 
 app = Flask(__name__)
 
