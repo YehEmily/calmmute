@@ -13,15 +13,15 @@ yoga_poses = ["bridge-pose", "upward-facing-dog", "downward-facing-dog-pose", "h
 def health():
     return 'ok'
 
-@app.route('/')
-@app.route('/index.html')
+@app.route('/', methods = ["POST"])
+@app.route('/index.html', methods = ["POST"])
 def home_page():
 	info = pose_information(random_yoga_pose())
 	return render_template('index.html', pose=info[0], description=info[1], video=info[2])
 
-@app.route('/about.html', methods=['GET','POST'])
-def about_page():
-	return render_template('about.html')
+# @app.route('/about.html', methods=['GET','POST'])
+# def about_page():
+# 	return render_template('about.html')
 
 def random_yoga_pose ():
 	pose = random.randint(0, len(yoga_poses)-1)
