@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel=stylesheet type=text/css href="static/stylesheet.css?version=35">
-		<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Arapey" rel="stylesheet"> <!-- add Google fonts -->	
+		<link rel=stylesheet type=text/css href="static/stylesheet.css?version=43">
+		<link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Anonymous+Pro|Arvo" rel="stylesheet"> <!-- add Google fonts -->	
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
@@ -10,16 +10,17 @@
 	</head>	
 
 	<body>
-		<center><h1>Welcome to Calmmute.</h1></center>
+		<center><h1>Calmmute.</h1></center>
 
 		<center><table>
 			<tr>
-				<td>Insert music/podcast player here</td>
-				<td>Insert activity here</td>
+				<th><iframe width="90%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/274816437&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></th>
+				<th><center>{{ pose }}<br/><br/>
+				<video width="90%" controls autoplay><source src="{{ video }}" type="video/mp4"></video></center><br/></th>
 			</tr>
 			<tr>
 				<td>Display information about what's playing here</td>
-				<td>Display information about activity here</td>
+				<td>{{ description }}</td>
 			</tr>
 		</table></center>
 
@@ -39,8 +40,8 @@
 		<form action="">
 
 			<p>1 <input type="range" min="0.0" max="5.0" value="2.5" step="0.1" onchange="showValue(this.value)"/> 5</p>
-			<span style="font-size: 2em" id="range"><i class='fa fa-snowflake-o'></i></span><br/><br/><br/>
-			<button>Submit Feedback</button>
+			<span style="font-size: 2em; color: white" id="range"><i class='fa fa-snowflake-o'></i></span><br/><br/><br/>
+			<button><b>Submit Feedback</b></button>
 		</form>
 		</center>
 		

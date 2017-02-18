@@ -1,9 +1,10 @@
 html {
-  background: url("bg1.png") center center fixed;
+	background-color: black;
+  /*background: url("bg1.png") center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
 }
 
 body {
@@ -12,12 +13,14 @@ body {
 }
 
 h1 {
-	font-family: "Amatic SC", cursive;
+	color: white;
+	font-family: 'Bungee Hairline', cursive;
 	font-size: 6em;
 }
 
 p {
-	font-family: "Arapey", serif;
+	color: white;
+	font-family: 'Arvo', serif;
 	font-size: 2em;
 }
 
@@ -29,22 +32,31 @@ table {
 	width: 95%;
 	padding: 2%;
 	border-radius: 20px;
-	border: 1px solid black;
+	border: 1px dashed white;
+	color: white;
+}
+
+th {
+	font-family: 'Bungee Hairline', cursive;
+	font-size: 2em;
+	width: 50%;
 }
 
 td {
-	font-family: "Arapey", serif;
-	font-size: 2em;
+	font-family: 'Anonymous Pro', monospace;
+	font-size: 1em;
+	width: 50%;
 }
 
 button {
 	-webkit-transition-duration: 0.4s; /*For Safari users*/
   	transition-duration: 0.4s;
-	font-family: "Amatic SC", cursive;
+	font-family: 'Bungee Hairline', cursive;
 	font-size: 25px;
 	background: none;
 	border: none;
 	padding: 5px;
+	color: white;
 }
 
 button:hover {
@@ -53,8 +65,8 @@ button:hover {
 	border: 1px solid black;
 	border-radius: 5px;
 	cursor: pointer;
-	background: black;
-	color: white;
+	background: white;
+	color: black;
 }
 
 /*input[type=checkbox] {
