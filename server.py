@@ -18,12 +18,12 @@ def health():
 @app.route('/', methods = ["GET", "POST"])
 @app.route('/index.html', methods = ["GET", "POST"])
 def home_page():
+	retrieve_feedback()
 	info = pose_information(random_yoga_pose())
-	return render_template('index.html', pose=info[0], description=info[1], video=info[2])
-
-# @app.route('/about.html', methods=['GET','POST'])
-# def about_page():
-# 	return render_template('about.html')
+	if request.method == "POST":
+		if "rating" in request.form:
+			save_feedback(request.form["rating"])
+	return render_template('index.html', pose=info[0], description=info[1], video=info[2], feedback=retrieve_feedback())
 
 def random_yoga_pose ():
 	pose = random.randint(0, len(yoga_poses)-1)
@@ -46,6 +46,23 @@ def pose_information (pose):
 	output = [' '.join(pose.split("-")).upper(), page[page.find(start)+11:page.find(end)-2], video]
 	return output
 
+def save_feedback (rating):
+	t = open("feedback_records.txt", "a+")
+	t.write(str(rating) + "\n")
+	t.close
+
+def retrieve_feedback ():
+	t = open("feedback_records.txt", "r+")
+	unfiltered = t.read()
+	filtered = unfiltered.split("\n")
+	count = 0
+	total = 0
+	for i in filtered:
+		if i != '':
+			total += float(i)
+			count += 1
+	average = total/count
+	return average
 
 
 if __name__ == '__main__':

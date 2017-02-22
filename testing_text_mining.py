@@ -23,6 +23,9 @@ def pose_video (pose):
 	end = page.find("mp4")
 	return page[start:end+3]
 
-
+def save_feedback (rating):
+	t = open("feedback_records.txt", "w+")
+	t.write(str(rating) + "\n")
+	t.close
 
 pose_description(random_yoga_pose())
