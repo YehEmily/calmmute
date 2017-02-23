@@ -64,6 +64,11 @@ def retrieve_feedback ():
 	average = total/count
 	return average
 
+@app.route('/pose.html', methods = ["GET", "POST"])
+def pose():
+	info = pose_information(random_yoga_pose())
+	return render_template('pose.html', video=info[2])
+
 
 if __name__ == '__main__':
 	port = int(os.environ.get('PORT', 5000))
