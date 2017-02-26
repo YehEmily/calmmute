@@ -28,4 +28,27 @@ def save_feedback (rating):
 	t.write(str(rating) + "\n")
 	t.close
 
-pose_description(random_yoga_pose())
+def save_feedback (file_name, rating):
+	t = open(file_name, "a+")
+	t.write(str(rating) + "\n")
+	t.close
+
+def retrieve_feedback (file_name):
+	t = open(file_name, "r+")
+	unfiltered = t.read()
+	filtered = unfiltered.split("\n")
+	count = 0
+	total = 0.0
+	for i in filtered:
+		if i != '':
+			total += float(i)
+			count += 1
+	if ((total==0.0) & (count==0)):
+		average=0.0
+	else:
+		average = total/count
+	return average
+
+# pose_description(random_yoga_pose())
+save_feedback("mood_gauge.txt", 2.6)
+print retrieve_feedback("mood_gauge.txt")
