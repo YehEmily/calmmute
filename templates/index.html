@@ -18,28 +18,13 @@
 				<th>
 				<iframe width="90%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/274816437&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 				</th>
-
-				<th id="pose">
-				</th>
-			</tr>
-			<tr>
-				<td></td>
-				<td>{{ description }}</td>
-			</tr>
-			<tr>
-				<td></td>
+				<th id="pose"></th>
+				<tr>
 				<td><button id="newpose">New Pose</button></td>
-			</tr>
+				</tr>
+				
 		</table></center>
 
-		<!-- Switch between music and podcasts = form --> 
-		<!-- Interface (with start/stop/skip buttons) -->
-		
-		<!-- Display information about file that is playing = retrieve from input data -->
-		
-		<!-- Related activity cards - meditation track = yoga pose? plain music = game -->
-		
-		<!-- Feedback form with... emotion buttons? -->
 
 		<br/><br/><br/>
 
@@ -73,18 +58,13 @@
 			}
 		</script>
 	</body>
-					<script type="text/javascript">
-					console.info('script')
-					$.get("pose.html", function(data){
-						console.info('initial load')
-						$("#pose").html(data)
-					})
-					$("#newpose").click(function(){
-						console.info('clicked')
-						$.get("pose.html", function(data){
-							console.info('click received')
-							$("#pose").html(data)
-					})})
-				</script>
-
+		<script type="text/javascript">
+			$.get("pose.html", function(data){
+				$("#pose").html(data)
+			})
+			$("#newpose").click(function(){
+				$.get("pose.html", function(data){
+				$("#pose").html(data);
+			})})
+		</script>
 </html>
