@@ -3,6 +3,7 @@ Calmmute is built upon the idea that commutes are cognitively important: having 
 
 ## Current State of the Software:
 ![Homepage](https://github.com/YehEmily/calmmute/blob/master/screenshots/1)
+<img src="https://github.com/YehEmily/calmmute/blob/master/screenshots/1" height="100"/>
 
 
 The user opts in to the calmmute experience and tells the site how they feel and how much time they have for this. This takes them to a page where they are served some meditation music and a yoga pose. They have the option to get a new yoga pose without interrupting the music. When they are done, they can provide feedback on the experience.
