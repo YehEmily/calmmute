@@ -23,7 +23,8 @@ First, download the repo from github. Our project requires you to have urllib.re
 
 ## Issues and Future Work
 ### Known issues
-Calmmute does not consistently function in the Firefox browser, for unknown reasons related to the embedded video. Chrome seems to work fine.
+Calmmute does not consistently function in the Firefox browser, for unknown reasons related to the embedded video. Chrome seems to work fine. In addition, some forms in Calmmute do not submit information correctly, for mysterious reasons.
+
 ### What Could Be Next
 We aren't sure what the best delivery of this page is. As an installation, it could be run from a tablet or other smart device with a screen, and could be installed in an appropriate curated space. As an app, a person could engage with it regardless of location. As a web-page or app, the interface could be both in an installation setting and portable. We have not decided which to do as of the completion of this stage. 
 
