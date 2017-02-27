@@ -31,7 +31,7 @@
 
 		<form method="POST">
 
-			<p>0 <input type="range" min="0.0" max="5.0" name="rating" value="2.5" step="0.1" onchange="showValue(this.value)"/> 5</p>
+			<p><i class='fa fa-heart-o'></i> <input type="range" min="0.0" max="5.0" name="rating" value="2.5" step="0.1" onchange="showValue(this.value)"/> <i class='fa fa-heart'></i></p>
 			<span style="font-size: 2em; color: white" id="range"><i class='fa fa-snowflake-o'></i></span><br/><br/><br/>
 			<button type="submit"><b>Submit Feedback</b></button>
 			<p style="font-size: 20px">The average visitor feels <span id="feedback">{{ feedback }}</span> after using Calmmute.</p><br/>
