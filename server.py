@@ -26,23 +26,21 @@ def home_page():
 		if request.form["mood"]:
 			print("Mood detected")
 			save_feedback("mood_gauge.txt", request.form["mood"])
+			return render_template('index.html', mood_gauge=retrieve_feedback("mood_gauge.txt"))
 		if request.form["time"]:
-			#do something
-			print("Time detected")
+			print("Time detected") #does nothing at the moment
 	return render_template('index.html', mood_gauge=retrieve_feedback("mood_gauge.txt"))
-
-@app.route('/time', methods = ["GET", "POST"])
-@app.route('/time.html', methods=["GET", "POST"])
-def time_page():
-	return render_template("time.html")
 
 @app.route('/calmmute', methods = ["GET", "POST"])
 @app.route('/calmmute.html', methods = ["GET", "POST"])
 def main_page():
 	info = pose_information(random_yoga_pose())
 	if request.method == "POST":
-		if "rating" in request.form:
+		if request.form["rating"]:
+			print("rating detected")
 			save_feedback("feedback_records.txt", request.form["rating"])
+
+			return render_template('calmmute.html', pose=info[0], description=info[1], video=info[2], feedback=retrieve_feedback("feedback_records.txt"))
 	else:
 		if "change_pose" in request.form:
 			info = pose_information(random_yoga_pose())

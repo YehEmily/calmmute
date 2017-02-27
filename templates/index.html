@@ -27,11 +27,11 @@
 		<h1>How are you feeling?</h1>
 		<br/><br/>
 
-		<form method="POST" action="#time">
+		<form method="POST" action="/#time">
 			<p>0 <input type="range" min="0.0" max="5.0" name="mood" value="2.5" step="0.1" onchange="showValue(this.value)"/> 5</p>
 
 			<span style="font-size: 2em; color: white" id="range"><i class='fa fa-snowflake-o'></i></span><br/><br/><br/>
-			<button><b><a>Continue</a></b></button>
+			<button type="submit"><b><a href="#time">Continue</a></b></button>
 			<p style="font-size: 20px">The average visitor feels <span id="mood_gauge">{{ mood_gauge }}</span></p>
 		</form></center></div>
 
@@ -41,9 +41,9 @@
 		<div class="container"><center><h1>How long can you stay?</h1>
 		<br/><br/>
 
-		<form method="POST" action="/calmmute">
+		<form method="GET" action="/calmmute.html">
 		  <input type="text" name="time" placeholder="Enter time (in minutes) here..."> &emsp; &emsp;
-		  <button type="submit"><b>Continue</b></button>
+		  <button><b>Continue</b></button>
 		</form></center></div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
