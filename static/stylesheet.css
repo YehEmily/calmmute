@@ -95,7 +95,7 @@ td {
 button {
 	-webkit-transition-duration: 0.4s; /*For Safari users*/
   	transition-duration: 0.4s;
-	font-family: 'Bungee Hairline', cursive;
+	font-family: 'VT323', monospace;
 	font-size: 25px;
 	background: none;
 	border: none;
